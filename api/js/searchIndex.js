@@ -91,6 +91,46 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Sholokhov-Exchange-Bootstrap-Validator.html#property_exchange"
         },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Builder\\SectionUtsBuilder",
+            "name": "SectionUtsBuilder",
+            "summary": "\u0421\u0431\u043E\u0440\u0449\u0438\u043A\u0020ORM\u0020\u0441\u0443\u0449\u043D\u043E\u0441\u0442\u0438\u0020\u043E\u043F\u0438\u0441\u044B\u0432\u0430\u044E\u0449\u0443\u044E\u0020\u0442\u0430\u0431\u043B\u0438\u0446\u0443\u0020\u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F\u0020\u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0439\u0020\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0445\u0020\u0441\u0432\u043E\u0439\u0441\u0442\u0432\u0020\u0028UF\u0029\u0020\u0440\u0430\u0437\u0434\u0435\u043B\u0430.",
+            "url": "classes/Sholokhov-Exchange-Builder-SectionUtsBuilder.html"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Builder\\SectionUtsBuilder\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Sholokhov-Exchange-Builder-SectionUtsBuilder.html#method___construct"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Builder\\SectionUtsBuilder\u003A\u003Amake\u0028\u0029",
+            "name": "make",
+            "summary": "\u0421\u043E\u0437\u0434\u0430\u043D\u0438\u0435\u0020ORM\u0020\u0441\u0443\u0449\u043D\u043E\u0441\u0442\u0438",
+            "url": "classes/Sholokhov-Exchange-Builder-SectionUtsBuilder.html#method_make"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Builder\\SectionUtsBuilder\u003A\u003AgetEntityName\u0028\u0029",
+            "name": "getEntityName",
+            "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435\u0020\u043D\u0430\u0438\u043C\u0435\u043D\u043E\u0432\u0430\u043D\u0438\u044F\u0020\u0441\u0443\u0449\u043D\u043E\u0441\u0442\u0438.",
+            "url": "classes/Sholokhov-Exchange-Builder-SectionUtsBuilder.html#method_getEntityName"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Builder\\SectionUtsBuilder\u003A\u003AgetTableName\u0028\u0029",
+            "name": "getTableName",
+            "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435\u0020\u043D\u0430\u0438\u043C\u0435\u043D\u043E\u0432\u0430\u043D\u0438\u044F\u0020\u0442\u0430\u0431\u043B\u0438\u0446\u044B\u0020\u043D\u0430\u0020\u043E\u0441\u043D\u043E\u0432\u0435\u0020\u043A\u043E\u0442\u043E\u0440\u043E\u0439\u0020\u0441\u043E\u0437\u0434\u0430\u0435\u0442\u0441\u044F\u0020\u0441\u0443\u0449\u043D\u043E\u0441\u0442\u044C",
+            "url": "classes/Sholokhov-Exchange-Builder-SectionUtsBuilder.html#method_getTableName"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Builder\\SectionUtsBuilder\u003A\u003AsetIBlockId\u0028\u0029",
+            "name": "setIBlockId",
+            "summary": "\u0423\u043A\u0430\u0437\u0430\u043D\u0438\u0435\u0020ID\u0020\u0440\u0430\u0437\u0434\u0435\u043B\u0430,\u0020\u0434\u043B\u044F\u0020\u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E\u0020\u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u0430\u0020\u0433\u0435\u043D\u0435\u0440\u0430\u0446\u0438\u044F\u0020ORM\u0020uts",
+            "url": "classes/Sholokhov-Exchange-Builder-SectionUtsBuilder.html#method_setIBlockId"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Builder\\SectionUtsBuilder\u003A\u003AgetIBlockId\u0028\u0029",
+            "name": "getIBlockId",
+            "summary": "ID\u0020\u0440\u0430\u0437\u0434\u0435\u043B\u0430\u0020\u043D\u0430\u0020\u043E\u0441\u043D\u043E\u0432\u0435\u0020\u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E\u0020\u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0441\u044F\u0020\u0433\u0435\u043D\u0435\u0440\u0430\u0446\u0438\u044F\u0020\u0441\u0443\u0449\u043D\u043E\u0441\u0442\u0438",
+            "url": "classes/Sholokhov-Exchange-Builder-SectionUtsBuilder.html#method_getIBlockId"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Builder\\SectionUtsBuilder\u003A\u003A\u0024iBlockId",
+            "name": "iBlockId",
+            "summary": "",
+            "url": "classes/Sholokhov-Exchange-Builder-SectionUtsBuilder.html#property_iBlockId"
+        },                {
             "fqsen": "\\Sholokhov\\Exchange\\Events\\Event",
             "name": "Event",
             "summary": "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435\u0020\u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0435\u0433\u043E\u0020\u0441\u043E\u0431\u044B\u0442\u0438\u044F\u0020\u043E\u0431\u043C\u0435\u043D\u0430",
@@ -296,6 +336,11 @@ Search.appendIndex(
             "summary": "\u0423\u043A\u0430\u0437\u0430\u043D\u0438\u0435\u0020\u043A\u0430\u0440\u0442\u044B\u0020\u0434\u0430\u043D\u043D\u044B\u0445\u0020\u043E\u0431\u043C\u0435\u043D\u0430",
             "url": "classes/Sholokhov-Exchange-Exchange.html#method_setMap"
         },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Exchange\u003A\u003AgetHash\u0028\u0029",
+            "name": "getHash",
+            "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435\u0020\u0445\u044D\u0448\u0430\u0020\u0438\u043C\u043F\u043E\u0440\u0442\u0430",
+            "url": "classes/Sholokhov-Exchange-Exchange.html#method_getHash"
+        },                {
             "fqsen": "\\Sholokhov\\Exchange\\Exchange\u003A\u003Aexecute\u0028\u0029",
             "name": "execute",
             "summary": "\u0417\u0430\u043F\u0443\u0441\u043A\u0020\u043E\u0431\u043C\u0435\u043D\u0430",
@@ -345,6 +390,11 @@ Search.appendIndex(
             "name": "getPrimaryField",
             "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435\u0020\u0441\u0432\u043E\u0439\u0441\u0442\u0432\u0430\u0020\u043E\u0442\u0432\u0435\u0447\u0430\u044E\u0449\u0435\u0433\u043E\u0020\u0437\u0430\u0020\u0438\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044E\u0020\u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F",
             "url": "classes/Sholokhov-Exchange-Exchange.html#method_getPrimaryField"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Exchange\u003A\u003AgetHashField\u0028\u0029",
+            "name": "getHashField",
+            "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435\u0020\u043F\u043E\u043B\u044F\u0020\u043E\u0442\u0432\u0435\u0447\u0430\u044E\u0449\u0435\u0433\u043E\u0020\u0437\u0430\u0020\u0445\u0435\u0448",
+            "url": "classes/Sholokhov-Exchange-Exchange.html#method_getHashField"
         },                {
             "fqsen": "\\Sholokhov\\Exchange\\Exchange\u003A\u003Aaction\u0028\u0029",
             "name": "action",
@@ -400,6 +450,11 @@ Search.appendIndex(
             "name": "execute",
             "summary": "\u0417\u0430\u043F\u0443\u0441\u043A\u0020\u043E\u0431\u043C\u0435\u043D\u0430\u0020\u0434\u0430\u043D\u043D\u044B\u043C\u0438",
             "url": "classes/Sholokhov-Exchange-ExchangeInterface.html#method_execute"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\ExchangeInterface\u003A\u003AgetHash\u0028\u0029",
+            "name": "getHash",
+            "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435\u0020\u0445\u044D\u0448\u0430\u0020\u043E\u0431\u043C\u0435\u043D\u0430",
+            "url": "classes/Sholokhov-Exchange-ExchangeInterface.html#method_getHash"
         },                {
             "fqsen": "\\Sholokhov\\Exchange\\Factory\\Highloadblock\\ProviderFactory",
             "name": "ProviderFactory",
@@ -491,6 +546,11 @@ Search.appendIndex(
             "summary": "\u042F\u0432\u043B\u044F\u0435\u0442\u0441\u044F\u0020\u0438\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u043C\u0020\u043F\u043E\u043B\u0435\u043C",
             "url": "classes/Sholokhov-Exchange-Fields-Field.html#method_isPrimary"
         },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Fields\\Field\u003A\u003AisHash\u0028\u0029",
+            "name": "isHash",
+            "summary": "\u041F\u043E\u043B\u0435\u0020\u0445\u0440\u0430\u043D\u0438\u0442\u0020\u0445\u044D\u0448\u0020\u0438\u043C\u043F\u043E\u0440\u0442\u0430",
+            "url": "classes/Sholokhov-Exchange-Fields-Field.html#method_isHash"
+        },                {
             "fqsen": "\\Sholokhov\\Exchange\\Fields\\Field\u003A\u003AisCreatedLink\u0028\u0029",
             "name": "isCreatedLink",
             "summary": "\u041F\u0440\u0438\u0020\u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0438\u0020\u0441\u0443\u0449\u043D\u043E\u0441\u0442\u0438\u0020\u043F\u043E\u043F\u044B\u0442\u0430\u0435\u0442\u0441\u044F\u0020\u0441\u043E\u0437\u0434\u0430\u0442\u044C",
@@ -500,6 +560,11 @@ Search.appendIndex(
             "name": "setPrimary",
             "summary": "\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C\u0020\u0444\u043B\u0430\u0433\u0020\u0438\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u043E\u043D\u043D\u043E\u0433\u043E\u0020\u043F\u043E\u043B\u044F",
             "url": "classes/Sholokhov-Exchange-Fields-Field.html#method_setPrimary"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Fields\\Field\u003A\u003AsetHash\u0028\u0029",
+            "name": "setHash",
+            "summary": "\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430\u0020\u0444\u043B\u0430\u0433\u0430,\u0020\u0447\u0442\u043E\u0020\u043F\u043E\u043B\u0435\u0020\u0445\u0440\u0430\u043D\u0438\u0442\u0020\u0445\u044D\u0448\u0020\u0438\u043C\u043F\u043E\u0440\u0442\u0430",
+            "url": "classes/Sholokhov-Exchange-Fields-Field.html#method_setHash"
         },                {
             "fqsen": "\\Sholokhov\\Exchange\\Fields\\Field\u003A\u003AsetCreatedLink\u0028\u0029",
             "name": "setCreatedLink",
@@ -575,6 +640,11 @@ Search.appendIndex(
             "name": "isPrimary",
             "summary": "\u041F\u043E\u043B\u0435\u0020\u043E\u0442\u0432\u0435\u0447\u0430\u0435\u0442\u0020\u0437\u0430\u0020\u0438\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044E\u0020\u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0439.",
             "url": "classes/Sholokhov-Exchange-Fields-FieldInterface.html#method_isPrimary"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Fields\\FieldInterface\u003A\u003AisHash\u0028\u0029",
+            "name": "isHash",
+            "summary": "\u0421\u0432\u043E\u0439\u0441\u0442\u0432\u043E\u0020\u043E\u0442\u0432\u0435\u0447\u0430\u0435\u0442\u0020\u0437\u0430\u0020\u0445\u0440\u0430\u043D\u0435\u043D\u0438\u0435\u0020\u0445\u044D\u0448\u0430",
+            "url": "classes/Sholokhov-Exchange-Fields-FieldInterface.html#method_isHash"
         },                {
             "fqsen": "\\Sholokhov\\Exchange\\Fields\\FieldInterface\u003A\u003AisCreatedLink\u0028\u0029",
             "name": "isCreatedLink",
@@ -2651,15 +2721,15 @@ Search.appendIndex(
             "summary": "\u041E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435\u0020\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430",
             "url": "classes/Sholokhov-Exchange-Target-IBlock-Element.html#method_update"
         },                {
-            "fqsen": "\\Sholokhov\\Exchange\\Target\\IBlock\\Element\u003A\u003AprepareItem\u0028\u0029",
-            "name": "prepareItem",
-            "summary": "\u0420\u0430\u0437\u0434\u0435\u043B\u0435\u043D\u0438\u0435\u0020\u0438\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u0443\u0435\u043C\u044B\u0445\u0020\u0434\u0430\u043D\u043D\u044B\u0445\u0020\u043D\u0430\u0020\u0433\u0440\u0443\u043F\u043F\u044B",
-            "url": "classes/Sholokhov-Exchange-Target-IBlock-Element.html#method_prepareItem"
-        },                {
             "fqsen": "\\Sholokhov\\Exchange\\Target\\IBlock\\Element\u003A\u003Adeactivate\u0028\u0029",
             "name": "deactivate",
             "summary": "\u0414\u0435\u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u044F\u0020\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432,\u0020\u043A\u043E\u0442\u043E\u0440\u044B\u0435\u0020\u043D\u0435\u0020\u043F\u0440\u0438\u0448\u043B\u0438\u0020\u0432\u0020\u0438\u043C\u043F\u043E\u0440\u0442\u0435",
             "url": "classes/Sholokhov-Exchange-Target-IBlock-Element.html#method_deactivate"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Target\\IBlock\\Element\u003A\u003AprepareItem\u0028\u0029",
+            "name": "prepareItem",
+            "summary": "\u0420\u0430\u0437\u0434\u0435\u043B\u0435\u043D\u0438\u0435\u0020\u0438\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u0443\u0435\u043C\u044B\u0445\u0020\u0434\u0430\u043D\u043D\u044B\u0445\u0020\u043D\u0430\u0020\u0433\u0440\u0443\u043F\u043F\u044B",
+            "url": "classes/Sholokhov-Exchange-Target-IBlock-Element.html#method_prepareItem"
         },                {
             "fqsen": "\\Sholokhov\\Exchange\\Target\\IBlock\\Element\u003A\u003AbeforeUpdate\u0028\u0029",
             "name": "beforeUpdate",
@@ -2680,6 +2750,11 @@ Search.appendIndex(
             "name": "getPropertyRepository",
             "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435\u0020\u0445\u0440\u0430\u043D\u0438\u043B\u0438\u0449\u0430\u0020\u0441\u0432\u043E\u0439\u0441\u0442\u0432\u0020\u0418\u0411",
             "url": "classes/Sholokhov-Exchange-Target-IBlock-Element.html#method_getPropertyRepository"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Target\\IBlock\\Element\u003A\u003AgetHashFieldCode\u0028\u0029",
+            "name": "getHashFieldCode",
+            "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435\u0020\u0441\u0432\u043E\u0439\u0441\u0442\u0432\u0430\u0020\u0432\u0020\u043A\u043E\u0442\u043E\u0440\u043E\u043C\u0020\u0445\u0440\u0430\u043D\u0438\u0442\u0441\u044F\u0020\u0445\u044D\u0448\u0020\u0438\u043C\u043F\u043E\u0440\u0442\u0430.",
+            "url": "classes/Sholokhov-Exchange-Target-IBlock-Element.html#method_getHashFieldCode"
         },                {
             "fqsen": "\\Sholokhov\\Exchange\\Target\\IBlock\\Element\u003A\u003AbootstrapPrepares\u0028\u0029",
             "name": "bootstrapPrepares",
@@ -3080,6 +3155,11 @@ Search.appendIndex(
             "name": "Bootstrap",
             "summary": "",
             "url": "namespaces/sholokhov-exchange-bootstrap.html"
+        },                {
+            "fqsen": "\\Sholokhov\\Exchange\\Builder",
+            "name": "Builder",
+            "summary": "",
+            "url": "namespaces/sholokhov-exchange-builder.html"
         },                {
             "fqsen": "\\Sholokhov\\Exchange\\Events",
             "name": "Events",
