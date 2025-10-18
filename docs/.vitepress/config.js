@@ -1,22 +1,26 @@
 // docs/.vitepress/config.js
+
 module.exports = {
     // Относительные пути
     base: '/',
 
     // Включаем чистые URL (убираем .html и слэши в конце)
     cleanUrls: true,
-    trailingSlash: false,
+    // trailingSlash: false,
 
     title: 'sholokhov.exchange',
     description: 'Документация по модулю sholokhov.exchange',
 
     head: [
-        ['link', {rel: 'icon', href: '/favicon.ico'}]
+        [
+            'link',
+            {rel: 'icon', href: '/favicon.ico'}
+        ]
     ],
 
     themeConfig: {
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+            { icon: 'github', link: 'https://github.com/sholokhov-daniil/sholokhov.exchange' }
         ],
         sidebar: [
             {
