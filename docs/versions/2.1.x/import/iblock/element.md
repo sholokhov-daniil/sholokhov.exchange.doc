@@ -143,7 +143,7 @@ EventManager::getInstance()->addEventHandler(
 );
 ```
 
-### Пример передачи ошибки при выполнении события
+#### Пример передачи ошибки при выполнении события
 ```php
 use Bitrix\Main\Event;
 use Bitrix\Main\EventResult;

@@ -67,17 +67,29 @@ export function generateVersionSwitcher(): DefaultTheme.NavItem {
 
   const versionSwitcher: DefaultTheme.NavItem = {
     text: 'Switch Version',
-    // component: '',
-    // params: {},
+    component: 'VersionSwitcher',
+    props: {
+      versioningPlugin: {
+        latestVersion: null,
+        versions: [],
+      }
+    },
     items: [
     ]
   }
 
   for (const version of versions) {
-    versionSwitcher.items.push({
-      text: version === LATEST_VERSION ? `${version} (latest)` : version,
+    const item = {
+      text: version,
       link: `/${version}/`
-    })
+    };
+
+    if (version === LATEST_VERSION) {
+      versionSwitcher.props.versioningPlugin.latestVersion = item;
+    }
+
+    versionSwitcher.items.push(item);
+    versionSwitcher.props.versioningPlugin.versions.push(item);
   }
 
   return versionSwitcher;

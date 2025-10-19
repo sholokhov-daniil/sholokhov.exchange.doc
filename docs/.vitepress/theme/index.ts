@@ -9,7 +9,7 @@ import './style.css'
 export default {
   ...DefaultTheme,
   Layout,
-  enhanceApp({app, router, siteData}) {
+  enhanceApp({app}) {
     app.component('VersionSwitcher', VersionSwitcher)
   }
 } satisfies Theme

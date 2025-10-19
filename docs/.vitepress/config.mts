@@ -17,23 +17,18 @@ export default defineConfig({
     ],
 
     themeConfig: {
-        versionSwitcher: {
-            latestVersion: '2.1.x',
-            folder: 'v',
-            items: [
-                {text: '2.1.x', link: '/versions/2.1.x/'},
-                {text: '0.9.0', link: '/versions/0.9.0/'},
-            ],
-        },
-
         themeConfig: {
             versionSwitcher: true,
+        },
+        outline: {
+            level: [2,3,4],
+            label: 'На этой странице'
         },
         socialLinks: [
             { icon: 'github', link: 'https://github.com/sholokhov-daniil/sholokhov.exchange' }
         ],
         nav: [
-            {text: 'Report a bug', link: "https://github.com/sholokhov-daniil/sholokhov.exchange/issues"},
+            {text: 'Сообщить об ошибке', link: "https://github.com/sholokhov-daniil/sholokhov.exchange/issues"},
             generateVersionSwitcher(),
         ],
         sidebar: generateVersionSidebars(),

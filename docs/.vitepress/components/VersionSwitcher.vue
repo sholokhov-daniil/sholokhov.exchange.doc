@@ -51,14 +51,14 @@ const toggle = () => {
 
   <div v-else class="VPScreenVersionSwitcher" :class="{ open: isOpen }">
     <button class="button" aria-controls="navbar-group-version" :aria-expanded="isOpen" @click="toggle">
-      <span class="button-text"><span class="vpi-versioning icon"/>Switch Version</span>
+      <span class="button-text"><span class="vpi-versioning icon"/>Выбрать версию</span>
       <span class="vpi-plus button-icon"/>
     </button>
 
     <div id="navbar-group-version" class="items">
       <VPMenuLink :item="versioningPlugin.latestVersion" />
       <template v-for="version in versioningPlugin.versions" :key="version">
-        <VPMenuLink :item="version"/>
+        <VPMenuLink v-if="currentVersion.text != version.text" :item="version"/>
       </template>
     </div>
   </div>
