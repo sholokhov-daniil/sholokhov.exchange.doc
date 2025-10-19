@@ -2,9 +2,8 @@ import fs from "node:fs"
 import path from "node:path"
 import JSON5 from 'json5'
 import { DefaultTheme } from "vitepress/theme"
-import util from "node:util"
 
-export const LATEST_VERSION = '2.1.0'
+export const LATEST_VERSION = '2.1.x'
 
 export interface VersionInformation {
   name: string,
@@ -55,8 +54,6 @@ export function generateVersionRewrites(): Record<string, string> {
     }
   }
 
-  console.log(rewrites)
-
   return rewrites
 }
 
@@ -70,17 +67,15 @@ export function generateVersionSwitcher(): DefaultTheme.NavItem {
 
   const versionSwitcher: DefaultTheme.NavItem = {
     text: 'Switch Version',
+    // component: '',
+    // params: {},
     items: [
-      {
-        text: `${LATEST_VERSION} (latest)`,
-        link: `/`
-      }
     ]
   }
 
   for (const version of versions) {
     versionSwitcher.items.push({
-      text: version,
+      text: version === LATEST_VERSION ? `${version} (latest)` : version,
       link: `/${version}/`
     })
   }
@@ -168,8 +163,6 @@ export function generateVersionSidebars(): DefaultTheme.SidebarMulti {
       });
     }
   }
-
-  console.log(util.inspect(versionSidebars, false, null, true))
 
   return versionSidebars
 }
