@@ -5,6 +5,10 @@ on:
     branches: [master]
   workflow_dispatch:
 
+# Укажем корень VitePress: "docs" или "." (если .vitepress лежит в корне)
+env:
+  VP_ROOT: docs
+
 permissions:
   contents: read
   pages: write
@@ -22,27 +26,34 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 23
+          node-version: 22
           cache: npm
+
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
+
       - name: Install dependencies
         run: npm ci
+
+      # Если VP_ROOT="docs", соберет docs/.vitepress/dist; если ".", то .vitepress/dist
       - name: Build with VitePress
-        run: npm run build
+        run: npx --no-install vitepress build "$VP_ROOT"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist
+          path: ${{ env.VP_ROOT }}/.vitepress/dist
+
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
