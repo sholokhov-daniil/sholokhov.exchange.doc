@@ -2,7 +2,7 @@
 
 module.exports = {
     // Относительные пути
-    base: '/',
+    base: '/sholokhov.exchange.doc/',
 
     // Включаем чистые URL (убираем .html и слэши в конце)
     cleanUrls: true,
