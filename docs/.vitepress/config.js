@@ -22,6 +22,9 @@ module.exports = {
         socialLinks: [
             { icon: 'github', link: 'https://github.com/sholokhov-daniil/sholokhov.exchange' }
         ],
+        nav: [
+            {text: 'Report a bug', link: "https://github.com/sholokhov-daniil/sholokhov.exchange/issues"}
+        ],
         sidebar: [
             {
                 text: 'Начало работы',
