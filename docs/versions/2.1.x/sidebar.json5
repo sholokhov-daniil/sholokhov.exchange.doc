@@ -21,6 +21,10 @@
           {
             "text": "Информационный блок",
             "link": "/guide/map/iblock"
+          },
+          {
+            "text": "Экспорт xml",
+            "link": "/guide/map/export-xml"
           }
         ]
       },

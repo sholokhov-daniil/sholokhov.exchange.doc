@@ -1,4 +1,4 @@
-# Свойство информационного блока
+# Описание тега в xml экспорте
 
 Класс: **Sholokhov\Exchange\Fields\Export\XmlField**
 
