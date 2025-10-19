@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "serve": "vitepress serve docs --port 4173"
+    "serve": "vitepress serve docs --port 4172"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
   "description": "",
   "devDependencies": {
     "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "@types/node": "^24.8.1",
+    "json5": "^2.2.3"
   }
 }
