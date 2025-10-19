@@ -12,7 +12,7 @@ export default defineConfig({
     head: [
         [
             'link',
-            {rel: 'icon', href: '/favicon.ico'}
+            {rel: 'icon', href: '/sholokhov.exchange.doc/favicon.ico'}
         ]
     ],
 
