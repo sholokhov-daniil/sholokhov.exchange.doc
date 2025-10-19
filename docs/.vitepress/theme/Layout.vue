@@ -2,6 +2,7 @@
 import DefaultTheme from 'vitepress/theme'
 import { inBrowser, useData, useRouter, useRoute } from 'vitepress'
 import { onBeforeMount } from 'vue'
+import {LATEST_VERSION} from "../data/versions";
 
 const { site } = useData()
 const { path } = useRoute()
@@ -12,8 +13,7 @@ onBeforeMount(() => {
   if (!inBrowser) return
 
   const base = site.value.base;
-  const versionConfig = site.value.themeConfig.versionSwitcher;
-  const rootFolder = `${base}${versionConfig.latestVersion}/`;
+  const rootFolder = `${base}${LATEST_VERSION}/`;
 
   if (path === base || path === `${base}/index.html`) {
     go(rootFolder);
