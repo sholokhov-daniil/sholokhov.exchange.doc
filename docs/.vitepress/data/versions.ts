@@ -3,7 +3,7 @@ import path from "node:path"
 import JSON5 from 'json5'
 import { DefaultTheme } from "vitepress/theme"
 
-export const LATEST_VERSION = '2.1.x'
+export const LATEST_VERSION = '2.2.x'
 
 export interface VersionInformation {
   name: string,
