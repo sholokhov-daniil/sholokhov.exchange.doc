@@ -1,6 +1,6 @@
 # Импорт разделов инфоблока
 
-Класс: **Sholokhov\Exchange\Target\IBlock\Section**
+Класс: **Sholokhov\Exchange\Target\Import\IBlock\Section**
 
 ## Конфигурация
 
@@ -20,7 +20,7 @@
 
 ```php
 use Sholokhov\Exchange\Fields\Field;
-use Sholokhov\Exchange\Target\IBlock\Section;
+use Sholokhov\Exchange\Target\Import\IBlock\Section;
 use Sholokhov\Exchange\Factory\Exchange\MapperFactory;
 
 $data = [
@@ -123,7 +123,7 @@ use Bitrix\Main\Event;
 use Bitrix\Main\EventResult;
 use Bitrix\Main\EventManager;
 
-use Sholokhov\Exchange\Target\UserFields\Enumeration;
+use Sholokhov\Exchange\Target\Import\UserFields\Enumeration;
 use Sholokhov\Exchange\Exception\Target\ExchangeItemStoppedException;
 
 /**

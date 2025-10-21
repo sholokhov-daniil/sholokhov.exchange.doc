@@ -33,7 +33,7 @@ $obj = new class implements Iterator {
 Рассмотрим создание простого импорта
 ```php
 use Sholokhov\Exchange\Fields\Field;
-use Sholokhov\Exchange\Target\IBlock\Element;
+use Sholokhov\Exchange\Target\Import\IBlock\Element;
 use Sholokhov\Exchange\Factory\Exchange\MapperFactory;
 
 $options = [

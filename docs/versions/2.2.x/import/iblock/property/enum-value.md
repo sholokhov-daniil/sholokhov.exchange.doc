@@ -1,6 +1,6 @@
 # Импорт значения списка
 
-Класс: **Sholokhov\Exchange\Target\IBlock\Property\PropertyEnumeration**
+Класс: **Sholokhov\Exchange\Target\Import\IBlock\Property\PropertyEnumeration**
 
 ## Введение
 
@@ -54,7 +54,7 @@ $source = [
 ```php
 use Sholokhov\Exchange\Fields\Field;
 use Sholokhov\Exchange\Factory\Exchange\MapperFactory;
-use Sholokhov\Exchange\Target\IBlock\Property\PropertyEnumeration;
+use Sholokhov\Exchange\Target\Import\IBlock\Property\PropertyEnumeration;
 
 $data = [
     [
@@ -149,7 +149,7 @@ use Bitrix\Main\Event;
 use Bitrix\Main\EventResult;
 use Bitrix\Main\EventManager;
 
-use Sholokhov\Exchange\Target\UserFields\Enumeration;
+use Sholokhov\Exchange\Target\Import\UserFields\Enumeration;
 use Sholokhov\Exchange\Exception\Target\ExchangeItemStoppedException;
 
 /**

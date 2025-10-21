@@ -1,6 +1,6 @@
 # Импорт элементов справочника
 
-Класс: **Sholokhov\Exchange\Target\Highloadblock\Element**
+Класс: **Sholokhov\Exchange\Target\Import\Highloadblock\Element**
 
 ## Конфигурация
 
@@ -22,7 +22,7 @@
 
 ```php
 use Sholokhov\Exchange\Fields\Field;
-use Sholokhov\Exchange\Target\Highloadblock\Element;
+use Sholokhov\Exchange\Target\Import\Highloadblock\Element;
 use Sholokhov\Exchange\Factory\Exchange\MapperFactory;
 
 $data = [
@@ -126,7 +126,7 @@ use Bitrix\Main\Event;
 use Bitrix\Main\EventResult;
 use Bitrix\Main\EventManager;
 
-use Sholokhov\Exchange\Target\UserFields\Enumeration;
+use Sholokhov\Exchange\Target\Import\UserFields\Enumeration;
 use Sholokhov\Exchange\Exception\Target\ExchangeItemStoppedException;
 
 /**

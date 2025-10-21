@@ -1,6 +1,6 @@
 # Импорт элементов инфоблока
 
-Класс: **Sholokhov\Exchange\Target\IBlock\Element**
+Класс: **Sholokhov\Exchange\Target\Import\IBlock\Element**
 
 ## Конфигурация
 Импорт поддерживает следующий формат конфигурации (иные ключи пропускаются и не используются):
@@ -18,7 +18,7 @@
 
 ```php
 use Sholokhov\Exchange\Fields\Field;
-use Sholokhov\Exchange\Target\IBlock\Element;
+use Sholokhov\Exchange\Target\Import\IBlock\Element;
 use Sholokhov\Exchange\Factory\Exchange\MapperFactory;
 
 $data = [
@@ -119,7 +119,7 @@ use Bitrix\Main\Event;
 use Bitrix\Main\EventResult;
 use Bitrix\Main\EventManager;
 
-use Sholokhov\Exchange\Target\UserFields\Enumeration;
+use Sholokhov\Exchange\Target\Import\UserFields\Enumeration;
 use Sholokhov\Exchange\Exception\Target\ExchangeItemStoppedException;
 
 /**

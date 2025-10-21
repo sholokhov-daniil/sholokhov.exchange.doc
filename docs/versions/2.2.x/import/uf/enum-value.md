@@ -1,6 +1,6 @@
 # Импорт значения списка пользовательского свойства (UF)
 
-Класс: **Sholokhov\Exchange\Target\UserFields\Enumeration**
+Класс: **Sholokhov\Exchange\Target\Import\UserFields\Enumeration**
 
 ## Введение
 
@@ -53,7 +53,7 @@ $source = [
 
 ```php
 use Sholokhov\Exchange\Fields\Field;
-use Sholokhov\Exchange\Target\UserFields\Enumeration;
+use Sholokhov\Exchange\Target\Import\UserFields\Enumeration;
 use Sholokhov\Exchange\Factory\Exchange\MapperFactory;
 
 $data = [
@@ -144,7 +144,7 @@ use Bitrix\Main\Event;
 use Bitrix\Main\EventResult;
 use Bitrix\Main\EventManager;
 
-use Sholokhov\Exchange\Target\UserFields\Enumeration;
+use Sholokhov\Exchange\Target\Import\UserFields\Enumeration;
 use Sholokhov\Exchange\Exception\Target\ExchangeItemStoppedException;
 
 /**
