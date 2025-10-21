@@ -1,7 +1,12 @@
 // docs/.vitepress/config.mts
 
 import { defineConfig } from 'vitepress'
-import { generateVersionRewrites, generateVersionSidebars, generateVersionSwitcher } from './data/versions'
+import {
+    generateChanges,
+    generateVersionRewrites,
+    generateVersionSidebars,
+    generateVersionSwitcher
+} from './data/versions'
 
 export default defineConfig({
     title: 'sholokhov.exchange',
@@ -28,6 +33,7 @@ export default defineConfig({
             { icon: 'github', link: 'https://github.com/sholokhov-daniil/sholokhov.exchange' }
         ],
         nav: [
+            generateChanges(),
             {text: 'Сообщить об ошибке', link: "https://github.com/sholokhov-daniil/sholokhov.exchange/issues"},
             generateVersionSwitcher(),
         ],

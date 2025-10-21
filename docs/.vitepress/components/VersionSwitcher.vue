@@ -1,35 +1,35 @@
 <script setup lang="ts">
-import {DefaultTheme, useData, useRouter} from "vitepress"
-import {computed, ref} from 'vue'
-import VPMenuLink from 'vitepress/dist/client/theme-default/components/VPMenuLink.vue'
-import VPFlyout from 'vitepress/dist/client/theme-default/components/VPFlyout.vue'
+  import {DefaultTheme, useData, useRouter} from "vitepress"
+  import {computed, ref} from 'vue'
+  import VPMenuLink from 'vitepress/dist/client/theme-default/components/VPMenuLink.vue'
+  import VPFlyout from 'vitepress/dist/client/theme-default/components/VPFlyout.vue'
 
-const props = defineProps<{
-  versioningPlugin: { versions: DefaultTheme.NavItem[], latestVersion: DefaultTheme.NavItem }
-  screenMenu?: boolean
-}>();
+  const props = defineProps<{
+    versioningPlugin: { versions: DefaultTheme.NavItem[], latestVersion: DefaultTheme.NavItem }
+    screenMenu?: boolean
+  }>();
 
-const router = useRouter();
-const {site} = useData();
+  const router = useRouter();
+  const {site} = useData();
 
-const currentVersion = computed(() => {
-  let version = props.versioningPlugin.latestVersion;
-  const base = site.value.base.endsWith('/') ? site.value.base.slice(0, -1) : site.value.base;
+  const currentVersion = computed(() => {
+    let version = props.versioningPlugin.latestVersion;
+    const base = site.value.base.endsWith('/') ? site.value.base.slice(0, -1) : site.value.base;
 
-  for (const v of props.versioningPlugin.versions) {
-    if (router.route.path.startsWith(base + v.link)) {
-      version = v;
-      break;
+    for (const v of props.versioningPlugin.versions) {
+      if (router.route.path.startsWith(base + v.link)) {
+        version = v;
+        break;
+      }
     }
-  }
 
-  return version;
-});
+    return version;
+  });
 
-const isOpen = ref(false);
-const toggle = () => {
-  isOpen.value = !isOpen.value;
-};
+  const isOpen = ref(false);
+  const toggle = () => {
+    isOpen.value = !isOpen.value;
+  };
 </script>
 
 <template>

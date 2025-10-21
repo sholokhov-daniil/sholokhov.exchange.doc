@@ -3,7 +3,12 @@ import path from "node:path"
 import JSON5 from 'json5'
 import { DefaultTheme } from "vitepress/theme"
 
-export const LATEST_VERSION = '2.1.x'
+
+export const LATEST_VERSION = '2.2.x'
+export let getVersions = () => {
+  const dir = path.resolve(__dirname, '../../versions');
+  return fs.readdirSync(dir);
+};
 
 export interface VersionInformation {
   name: string,
@@ -154,17 +159,40 @@ export function getSidebar(version: string): DefaultTheme.SidebarItem[] | Defaul
   return [];
 }
 
+export function generateChanges(): DefaultTheme.NavItem {
+  const iterator = [];
+
+  getVersions().forEach(version => {
+    const dir = path.resolve(__dirname, `../../versions/${version}/changes.md`);
+    if (fs.existsSync(dir)) {
+      iterator.push({
+        dir: `/${version}/`,
+        link: `/${version}/changes`,
+      });
+    }
+  })
+
+  return {
+    text: 'Что нового?',
+    component: 'VersionChanges',
+    props: {
+      versioningPlugin: {
+        versions: iterator
+      }
+    },
+  };
+}
+
 /**
  * Generates a sidebar for each version in the "versions" folder.
  * @returns {DefaultTheme.SidebarMulti} A map of versions to their sidebars.
  */
 export function generateVersionSidebars(): DefaultTheme.SidebarMulti {
-  const versionsDir = path.resolve(__dirname, '../../versions')
-  const versions = fs.readdirSync(versionsDir)
-
   const versionSidebars: DefaultTheme.SidebarMulti = {}
 
-  for (const version of versions) {
+  // console.log(versions);
+
+  for (const version of getVersions()) {
     const versionSidebar = getSidebar(version);
 
     if (Array.isArray(versionSidebar)) {
