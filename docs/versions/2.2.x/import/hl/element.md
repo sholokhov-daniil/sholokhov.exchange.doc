@@ -4,13 +4,15 @@
 
 ## Конфигурация
 
-Импорт поддерживает следующий формат конфигурации (иные ключи пропускаются и не используются):
+Конфигурация импорта производится через DTO **Sholokhov\Exchange\Target\Options\Import\HlElementOption**.
+Описание параметров
 
 > Поддерживаются форматы хеширования для идентификации записей
 
-| Название   | Обязательное | Тип данных | Значение по умолчанию | Описание                                                                  |
-|------------|--------------|------------|-----------------------|---------------------------------------------------------------------------|
-| entity_id  | Да           | int        | Нет                   | Идентификатор сущности, в которую производится импорт элементов           |
+| Название | Обязательное | Тип данных | Значение по умолчанию | Описание                                                        |
+|----------|--------------|------------|-----------------------|-----------------------------------------------------------------|
+| entityId | Да           | int        | Нет                   | Идентификатор сущности, в которую производится импорт элементов |
+| hash     | Нет          | string     |                       | Идентификатор обмена                                            |
 
 > ⚠️ Внимание
 > 
@@ -24,6 +26,7 @@
 use Sholokhov\Exchange\Fields\Field;
 use Sholokhov\Exchange\Target\Import\Highloadblock\Element;
 use Sholokhov\Exchange\Factory\Exchange\MapperFactory;
+use Sholokhov\Exchange\Target\Options\Import\HlElementOption;
 
 $data = [
     [
@@ -49,9 +52,9 @@ $map = [
 $repository = MapperFactory::create();
 $repository->setFields($map);
 
-$options = [
-    'entity_id' => 1,
-];
+$hlId = 1;
+$options = new HlElementOption($hlId);
+$options->hash = 'import_hash'; 
 
 $exchange = new Element($options);
 $exchange->setMappingRegistry($repository);

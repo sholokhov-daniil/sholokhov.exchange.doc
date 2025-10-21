@@ -3,15 +3,17 @@
 Класс: **Sholokhov\Exchange\Target\Import\IBlock\Element**
 
 ## Конфигурация
-Импорт поддерживает следующий формат конфигурации (иные ключи пропускаются и не используются):
+Конфигурация импорта производится через DTO **Sholokhov\Exchange\Target\Options\Import\IBlock\IBlockOption**.
+Описание параметров
 
 > ⚠️ Внимание
 > 
 > Поддерживает разграничение данных на основе идентификатора обмена
 
-| Название  | Обязательное | Тип данных | Значение по умолчанию | Описание                                                                    |
-|-----------|--------------|------------|-----------------------|-----------------------------------------------------------------------------|
-| iblock_id | Да           | int        | Нет                   | Идентификатор информационного блока в который производится импорт элементов |
+| Название | Обязательное | Тип данных | Значение по умолчанию | Описание                                                                    |
+|----------|--------------|------------|-----------------------|-----------------------------------------------------------------------------|
+| iBlockId | Да           | int        | Нет                   | Идентификатор информационного блока в который производится импорт элементов |
+| hash     | Нет          | string     |                       | Идентификатор обмена                                                        |
 
 ## Пример
 Разберем пример запуска импорта элементов информационного блока
@@ -20,6 +22,7 @@
 use Sholokhov\Exchange\Fields\Field;
 use Sholokhov\Exchange\Target\Import\IBlock\Element;
 use Sholokhov\Exchange\Factory\Exchange\MapperFactory;
+use Sholokhov\Exchange\Target\Options\Import\IBlock\IBlockOption;
 
 $data = [
     [
@@ -42,10 +45,9 @@ $map = [
         ->setTo('NAME'),
 ];
 
-$options = [
-    'iblock_id' => 3,
-    'deactivate' => true,
-];
+$iBlockId = 3;
+$options = new IBlockOption($iBlockId);
+$options->hash = 'test_import';
 
 $repository = MapperFactory::create();
 $repository->setFields($map);

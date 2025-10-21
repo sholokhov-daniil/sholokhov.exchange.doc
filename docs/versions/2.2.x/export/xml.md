@@ -31,17 +31,17 @@ $source = [
 
 ## Конфигурация
 
-Экспорт поддерживает следующий формат конфигурации (иные ключи пропускаются и не используются):
+Конфигурация экспорта производится через DTO **Sholokhov\Exchange\Target\Options\Export\XmlOption**.
+Описание параметров
 
-| Название        | Обязательное | Тип данных                                 | Значение по умолчанию           | Описание                                                                                          |
-|-----------------|--------------|--------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------|
-| encoding        | Нет          | string                                     | Кодировка из кластера или utf-8 | Кодировка данных в источнике. Если кодировка не utf-8, то производится автоматическая конвертация |
-| version         | Нет          | string                                     | 1.0                             | Версия xml файла                                                                                  |
-| root            | Нет          | string                                     | root                            | Название корневого тега, который хранит список импортируемых элементов                            |
-| element_tag     | Нет          | string                                     | item                            | Тег хранения элемента сущности                                                                    |
-| save_path       | Нет          | string                                     | /upload/tmp/export.xml          | Путь хранения экспорта                                                                            |
-| item_attributes | Нет          | Sholokhov\Exchange\Fields\FieldInterface[] |                                 | Карта атрибутов элемента сущности. Логика работы аналогична карте импорта\экспорта                |
-
+| Название          | Обязательное | Тип данных                                 | Значение по умолчанию           | Описание                                                                                          |
+|-------------------|--------------|--------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------|
+| sourceCharset     | Нет          | string                                     | Кодировка из кластера или utf-8 | Кодировка данных в источнике. Если кодировка не utf-8, то производится автоматическая конвертация |
+| version           | Нет          | string                                     | 1.0                             | Версия xml файла                                                                                  |
+| rootTag           | Нет          | string                                     | root                            | Название корневого тега, который хранит список импортируемых элементов                            |
+| elementTag        | Нет          | string                                     | item                            | Тег хранения элемента сущности                                                                    |
+| savePath          | Нет          | string                                     | /upload/tmp/export.xml          | Путь хранения экспорта                                                                            |
+| elementAttributes | Нет          | Sholokhov\Exchange\Fields\FieldInterface[] |                                 | Карта атрибутов элемента сущности. Логика работы аналогична карте импорта\экспорта                |
 
 ## Пример
 
@@ -53,6 +53,7 @@ use Sholokhov\Exchange\Fields\Export\XmlField;
 use Sholokhov\Exchange\Source\Entities\IBlock\Element;
 use Sholokhov\Exchange\Factory\Exchange\MapperFactory;
 use Sholokhov\Exchange\Normalizers\File\FileIdToPathNormalizer;
+use Sholokhov\Exchange\Target\Options\Export\XmlOption;
 
 $source = new Element([
     'FILTER' => [
@@ -96,14 +97,15 @@ $map = [
 $mapRepository = MapperFactory::create();
 $mapRepository->setFields($map);
 
-$exchange = new Target\Export\Xml([
-    'encoding' => 'windows-1251',
-    'item_attributes' => [
-        (new Field)
-            ->setFrom('PROPERTIES.HASH.VALUE')
-            ->setTo('hash')
-    ]
-]);
+$options = new XmlOption;
+$options->sourceCharset = 'windows-1251';
+$options->elementAttributes = [
+    (new Field)
+        ->setFrom('PROPERTIES.HASH.VALUE')
+        ->setTo('hash')
+];
+
+$exchange = new Target\Export\Xml($options);
 $exchange->setMappingRegistry($mapRepository);
 
 $result = $exchange->execute($source);

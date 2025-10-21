@@ -40,12 +40,13 @@ $source = [
 
 ## Конфигурация
 
-Импорт поддерживает следующий формат конфигурации (иные ключи пропускаются и не используются):
+Конфигурация импорта производится через DTO **Sholokhov\Exchange\Target\Options\Import\UserField\EnumerationOption**.
+Описание параметров
 
-| Название      | Обязательное | Тип данных | Значение по умолчанию | Описание                                |
-|---------------|--------------|------------|-----------------------|-----------------------------------------|
-| entity_id     | Да           | string     | Нет                   | Сущность, в которую производится импорт |
-| property_code | Да           | string     | Нет                   | Свойство, в которое производится импорт |
+| Название     | Обязательное | Тип данных | Значение по умолчанию | Описание                                |
+|--------------|--------------|------------|-----------------------|-----------------------------------------|
+| entityId     | Да           | string     | Нет                   | Сущность, в которую производится импорт |
+| propertyCode | Да           | string     | Нет                   | Свойство, в которое производится импорт |
 
 ## Пример
 
@@ -53,8 +54,9 @@ $source = [
 
 ```php
 use Sholokhov\Exchange\Fields\Field;
-use Sholokhov\Exchange\Target\Import\UserFields\Enumeration;
 use Sholokhov\Exchange\Factory\Exchange\MapperFactory;
+use Sholokhov\Exchange\Target\Import\UserFields\Enumeration;
+use Sholokhov\Exchange\Target\Options\Import\UserField\EnumerationOption;
 
 $data = [
     [
@@ -80,10 +82,9 @@ $map = [
 $repository = MapperFactory::create();
 $repository->setFields($map);
 
-$options = [
-    'entity_id' => 'HLBLOCK_1',
-    'property_code' => 'UF_COLOR'
-];
+$entityId = 'HLBLOCK_1';
+$propertyCode = 'UF_COLOR';
+$options = new  EnumerationOption($entityId, $propertyCode);
 
 $exchange = new Enumeration($options);
 $exchange->setMappingRegistry($repository);

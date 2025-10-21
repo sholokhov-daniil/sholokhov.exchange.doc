@@ -40,12 +40,14 @@ $source = [
 
 ## Конфигурация
 
-Импорт поддерживает следующий формат конфигурации (иные ключи пропускаются и не используются):
+Конфигурация импорта производится через DTO **Sholokhov\Exchange\Target\Options\Import\IBlock\PropertyEnumerationOption**.
+Описание параметров
 
-| Название      | Обязательное | Тип данных | Значение по умолчанию | Описание                                                |
-|---------------|--------------|------------|-----------------------|---------------------------------------------------------|
-| iblock_id     | Да           | int        | Нет                   | ID информационного блока, которому принадлежит свойство |
-| property_code | Да           | string     | Нет                   | Свойство, в которое производится импорт значения        |
+| Название     | Обязательное | Тип данных | Значение по умолчанию | Описание                                                |
+|--------------|--------------|------------|-----------------------|---------------------------------------------------------|
+| iBlockId     | Да           | int        | Нет                   | ID информационного блока, которому принадлежит свойство |
+| propertyCode | Да           | string     | Нет                   | Свойство, в которое производится импорт значения        |
+| hash         | Нет          | string     |                       | Идентификатор обмена                                    |
 
 ## Пример
 
@@ -55,6 +57,7 @@ $source = [
 use Sholokhov\Exchange\Fields\Field;
 use Sholokhov\Exchange\Factory\Exchange\MapperFactory;
 use Sholokhov\Exchange\Target\Import\IBlock\Property\PropertyEnumeration;
+use Sholokhov\Exchange\Target\Options\Import\IBlock\PropertyEnumerationOption;
 
 $data = [
     [
@@ -80,10 +83,10 @@ $map = [
 $repository = MapperFactory::create();
 $repository->setFields($map);
 
-$options = [
-    'iblock_id' => '1',
-    'property_code' => 'COLOR'
-];
+$iblockId = 1;
+$propertyCode = 'COLOR';
+$options = new PropertyEnumerationOption($iblockId, $propertyCode); 
+$options->hash = 'import_hash';
 
 $exchange = new PropertyEnumeration($options);
 $exchange->setMappingRegistry($repository);
@@ -120,7 +123,7 @@ $exchange->execute($data);
 > ⚠️ Внимание  
 > 
 > Если событие вернет статус отличный от успешного, обновление не произойдет. Возможна передача массива ошибок, которые
-будут добавлены в результат работы импорта.
+> будут добавлены в результат работы импорта.
 
 
 #### Пример модификации данных
