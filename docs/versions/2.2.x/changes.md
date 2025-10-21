@@ -151,3 +151,42 @@ class MyExchange extends AbstractExchange
 ```
 
 Роль хранилища конфигурации выступают DTO объекты(**/lib/Target/Options**), которые приходят из вне.
+
+## Изменена логика деактивации
+
+Был закрыт доступ к методу **deactivate** - вся логика должна храниться в методе **doDeactivate**.  
+Запуск деактивации уходит под управление каждому импорту. По умолчанию деактивация недоступна
+
+### Было
+```php
+use Sholokhov\Exchange\AbstractImport;
+
+class MyExchange extends AbstractImport
+{
+    protected function deactivate(): void 
+    {
+        // ...
+    }
+}
+```
+
+### Стало
+```php
+use Sholokhov\Exchange\AbstractImport;
+use Sholokhov\Exchange\Target\Options\Import\BaseImportOption;
+
+class MyExchange extends AbstractImport
+{
+    private BaseImportOption $option;
+
+    protected function doDeactivate(): void 
+    {
+        // ...
+    }
+    
+    protected function canDeactivate(): bool 
+    {
+        return $this->option->deactivate;
+    }
+}
+```

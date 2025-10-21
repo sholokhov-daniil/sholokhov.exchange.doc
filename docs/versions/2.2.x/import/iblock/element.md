@@ -48,6 +48,7 @@ $map = [
 $iBlockId = 3;
 $options = new IBlockOption($iBlockId);
 $options->hash = 'test_import';
+$options->deactivate = true;
 
 $repository = MapperFactory::create();
 $repository->setFields($map);

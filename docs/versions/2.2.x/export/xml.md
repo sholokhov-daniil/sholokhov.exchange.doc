@@ -142,3 +142,16 @@ $result = $exchange->execute($source);
   </item>
 </root>
 ```
+
+### Сохранение на другом сервере
+
+```php
+use Sholokhov\Exchange\Target;
+use Sholokhov\Exchange\Target\Options\Export\XmlOption;
+
+$options = new XmlOption;
+$options->savePath = 'ftp://login:pass@host/export_folder/export.xml';
+
+$exchange = new Target\Export\Xml($options);
+$exchange->execute();
+```

@@ -53,6 +53,7 @@ $repository->setFields($map);
 $iBlockId = 3;
 $options = new IBlockOption($iBlockId);
 $options->hash = 'test_import';
+$options->deactivate = true;
 
 $exchange = new Section($options);
 $exchange->setMappingRegistry($repository);
